@@ -13,12 +13,16 @@ const screens = [
     text: "To get started on a project, you'll want to locate the {0} on GitHub or ADO.",
     blanks: ['repository'],
     distractors: ['directory', 'package'],
+    image: 'github.png',
+    imageHeight: 300,
   },
   {
     type: 'question',
     text: "{0} the repository to create a {1} copy on your computer that's linked to the {2} repository.",
     blanks: ['Clone', 'local', 'remote'],
     distractors: ['Fork', 'cloud'],
+    image: 'clone.png',
+    imageHeight: 300,
   },
   {
     type: 'question',
@@ -233,7 +237,7 @@ function renderQuestion(screen) {
       ${renderTopBar()}
       <main class="quiz-body">
         <div class="quiz-prompt">
-          ${screen.image ? `<img class="quiz-image" src="images/${screen.image}" alt="" />` : ''}
+          ${screen.image ? `<img class="quiz-image" src="images/${screen.image}" alt="" style="max-height:${screen.imageHeight || 200}px" />` : ''}
           <h2 class="quiz-title">Fill in the blanks</h2>
           <div class="sentence" id="sentence"></div>
         </div>
@@ -447,16 +451,39 @@ function renderComplete() {
       </main>
     </section>
   `;
-  document.getElementById('restart-btn').onclick = () => {
-    state.idx = 0;
-    state.stars = 4;
-    resetQuestionState();
-    render();
-  };
+  document.getElementById('restart-btn').onclick = restart;
+}
+
+function renderFail() {
+  app.innerHTML = `
+    <section class="screen active">
+      <main class="complete-body">
+        <img class="character-img" src="images/octocat_cry.png" alt="Octocat" />
+        <h1 class="fail-title">Out of hearts!</h1>
+        <div class="complete-stars"><span class="empty">${'♥'.repeat(4)}</span></div>
+        <p>You ran out of hearts. Give it another go from the top.</p>
+        <div style="margin-top:24px">
+          <button class="btn-continue" id="restart-btn" type="button">Start over</button>
+        </div>
+      </main>
+    </section>
+  `;
+  document.getElementById('restart-btn').onclick = restart;
+}
+
+function restart() {
+  state.idx = 0;
+  state.stars = 4;
+  resetQuestionState();
+  render();
 }
 
 // ---- Navigation ----
 function next() {
+  if (state.stars === 0) {
+    renderFail();
+    return;
+  }
   if (state.idx < screens.length - 1) {
     state.idx += 1;
     resetQuestionState();

@@ -499,6 +499,7 @@ footer.welcome-footer {
   color: #58cc02;
   margin: 0 0 12px;
 }
+.complete-body h1.fail-title { color: #ff4b4b; }
 .complete-stars {
   font-size: 32px;
   color: #ff4b4b;
