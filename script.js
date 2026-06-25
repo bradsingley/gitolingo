@@ -29,12 +29,16 @@ const screens = [
     text: "Open the repo in {0} to set up your dev environment.",
     blanks: ['Visual Studio Code'],
     distractors: ['Notepad', 'GitHub'],
+    image: 'Code.png',
+    imageHeight: 300,
   },
   {
     type: 'question',
     text: "If it's been a while, {0} the latest changes from the {1} {2} to make sure everything is up to date.",
     blanks: ['pull', 'main', 'branch'],
     distractors: ['push', 'dev'],
+    image: 'pull.png',
+    imageHeight: 300,
   },
 
   {
