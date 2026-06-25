@@ -53,6 +53,8 @@ const screens = [
     text: "Create your own {0} where you can experiment.",
     blanks: ['branch'],
     distractors: ['fork', 'clone'],
+    image: 'branch.png',
+    imageHeight: 300,
   },
 
   {
