@@ -20,7 +20,7 @@ const screens = [
     type: 'question',
     text: "{0} the repository to create a {1} copy on your computer that's linked to the {2} repository.",
     blanks: ['Clone', 'local', 'remote'],
-    distractors: ['Fork', 'cloud'],
+    distractors: ['Fork', 'backup'],
     image: 'clone.jpeg',
     imageHeight: 300,
   },
