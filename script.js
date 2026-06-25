@@ -59,13 +59,6 @@ const screens = [
 
   {
     type: 'question',
-    text: "You're ready to vibe code. You can use {0} servers to have more control over the process.",
-    blanks: ['MCP'],
-    distractors: ['API', 'SDK'],
-  },
-
-  {
-    type: 'question',
     text: "Don't forget to {0} your changes often to save checkpoints on your local computer.",
     blanks: ['commit'],
     distractors: ['save', 'stash'],
