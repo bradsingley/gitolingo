@@ -62,6 +62,8 @@ const screens = [
     text: "Don't forget to {0} your changes often to save checkpoints on your local computer.",
     blanks: ['commit'],
     distractors: ['save', 'stash'],
+    image: 'commit.png',
+    imageHeight: 300,
   },
   {
     type: 'question',
