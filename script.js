@@ -75,8 +75,8 @@ const screens = [
   {
     type: 'question',
     text: "When you're satisfied with your code, {0} updates from the main branch and {1} those changes to your {2} to avoid conflicts.",
-    blanks: ['pull', 'merge', 'branch'],
-    distractors: ['fetch', 'rebase'],
+    blanks: ['fetch', 'merge', 'branch'],
+    distractors: ['stash', 'rebase'],
   },
   {
     type: 'question',
