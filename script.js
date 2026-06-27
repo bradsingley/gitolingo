@@ -106,6 +106,8 @@ const screens = [
     text: "Once the PR has {0} into the main branch, it's ready to be {1} to users.",
     blanks: ['merged', 'released'],
     distractors: ['pushed', 'reverted'],
+    image: 'deploy.png',
+    imageHeight: 300,
   },
 
   { type: 'complete' },
