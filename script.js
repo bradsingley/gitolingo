@@ -77,12 +77,16 @@ const screens = [
     text: "When you're satisfied with your code, {0} updates from the main branch and {1} those changes to your {2} to avoid conflicts.",
     blanks: ['fetch', 'merge', 'branch'],
     distractors: ['stash', 'rebase'],
+    image: 'merge.png',
+    imageHeight: 300,
   },
   {
     type: 'question',
     text: "Now you're ready to submit a {0} and you might want to put the pull request behind a {1} for testing.",
     blanks: ['pull request', 'flight'],
     distractors: ['merge request', 'canary'],
+    image: 'pullrequest.jpeg',
+    imageHeight: 300,
   },
   {
     type: 'celebration',
