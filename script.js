@@ -103,9 +103,9 @@ const screens = [
   },
   {
     type: 'question',
-    text: "Once the PR has {0} into the main branch, it's ready to be {1} and flighted.",
-    blanks: ['merged', 'deployed'],
-    distractors: ['pushed', 'released'],
+    text: "Once the PR has {0} into the main branch, it's ready to be {1} to users.",
+    blanks: ['merged', 'released'],
+    distractors: ['pushed', 'reverted'],
   },
 
   { type: 'complete' },
