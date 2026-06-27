@@ -82,9 +82,9 @@ const screens = [
   },
   {
     type: 'question',
-    text: "Now you're ready to submit a {0}. Reviewers will check your code and decide whether to {1} it into the main branch.",
-    blanks: ['pull request', 'merge'],
-    distractors: ['merge request', 'push', 'commit'],
+    text: "Now you're ready to submit a {0}. It's basically a request asking for your code to be {1} into the project.",
+    blanks: ['pull request', 'adopted'],
+    distractors: ['merge request', 'pushed', 'deleted'],
     image: 'pullrequest.jpeg',
     imageHeight: 300,
   },
