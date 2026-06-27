@@ -82,9 +82,9 @@ const screens = [
   },
   {
     type: 'question',
-    text: "Now you're ready to submit a {0} and you might want to put the pull request behind a {1} for testing.",
-    blanks: ['pull request', 'flight'],
-    distractors: ['merge request', 'canary'],
+    text: "Now you're ready to submit a {0}. You might also want to set up an {1} to test your changes with a subset of users.",
+    blanks: ['pull request', 'experiment'],
+    distractors: ['merge request', 'incident'],
     image: 'pullrequest.jpeg',
     imageHeight: 300,
   },
