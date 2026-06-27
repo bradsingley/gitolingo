@@ -50,7 +50,7 @@ const screens = [
 
   {
     type: 'question',
-    text: "If you want to experiment with a new feature or fix a bug, create a new {0} to start a new line of development in your repo. If you want to create an entirely new repo, you can {1} the code instead.",
+    text: "If you want to experiment with a new feature or fix a bug, create a {0} to start a new line of development in your repo. If you want to create an entirely new repo, you can {1} the code instead.",
     blanks: ['branch', 'fork'],
     distractors: ['clone', 'merge', 'stash'],
     image: 'branch.png',
